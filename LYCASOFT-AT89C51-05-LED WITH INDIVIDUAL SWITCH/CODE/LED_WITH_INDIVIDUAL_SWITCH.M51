@@ -1,0 +1,139 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/25/2018  11:58:14  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj, LED_WITH_INDIVIDUAL_SWITCH.obj TO LED_WITH_INDIVIDUAL_SWITCH
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  LED_WITH_INDIVIDUAL_SWITCH.obj (LED_WITH_INDIVIDUAL_SWITCH)
+
+
+LINK MAP OF MODULE:  LED_WITH_INDIVIDUAL_SWITCH (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     001DH     UNIT         ?PR?DELAY?LED_WITH_INDIVIDUAL_SWITCH
+            CODE    081DH     0017H     UNIT         ?PR?MAIN?LED_WITH_INDIVIDUAL_SWITCH
+            CODE    0834H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   LED_WITH_INDIVIDUAL_SWITCH (?C_STARTUP)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?LED_WITH_INDIVIDUAL_SWITCH
+
+
+
+SYMBOL TABLE OF MODULE:  LED_WITH_INDIVIDUAL_SWITCH (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0834H         SEGMENT       ?C_C51STARTUP
+  I:0008H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/25/2018  11:58:14  PAGE 2
+
+
+  C:0837H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0834H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0834H         LINE#         133
+  C:0836H         LINE#         134
+  C:0837H         LINE#         135
+  C:0838H         LINE#         136
+  C:083AH         LINE#         185
+  C:083DH         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        LED_WITH_INDIVIDUAL_SWITCH
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A0H.0       PUBLIC        LED1
+  B:00A0H.1       PUBLIC        LED2
+  C:0800H         PUBLIC        delay
+  C:081DH         PUBLIC        main
+  B:00A0H.2       PUBLIC        SW1
+  B:00A0H.3       PUBLIC        SW2
+  -------         PROC          DELAY
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0800H         LINE#         3
+  C:0800H         LINE#         4
+  C:0800H         LINE#         6
+  C:0803H         LINE#         7
+  C:081CH         LINE#         8
+  -------         ENDPROC       DELAY
+  -------         PROC          MAIN
+  C:081DH         LINE#         16
+  C:081DH         LINE#         17
+  C:081DH         LINE#         18
+  C:0820H         LINE#         20
+  C:0820H         LINE#         21
+  C:0820H         LINE#         22
+  C:0823H         LINE#         23
+  C:0823H         LINE#         24
+  C:0825H         LINE#         25
+  C:0827H         LINE#         27
+  C:0829H         LINE#         29
+  C:082CH         LINE#         30
+  C:082CH         LINE#         31
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/25/2018  11:58:14  PAGE 3
+
+
+  C:082EH         LINE#         32
+  C:0830H         LINE#         34
+  C:0832H         LINE#         35
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        LED_WITH_INDIVIDUAL_SWITCH
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY?LED_WITH_INDIVIDUAL_SWITCH
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0043H BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=67
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
